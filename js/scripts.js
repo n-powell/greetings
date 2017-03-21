@@ -26,4 +26,20 @@ $(document).ready(function(){
     });
   });
 
+  $("button#cat-button").click(function(){
+    $("ul#cats").prepend('<li><img src="img/cat.jpg"/></li>');
+
+    $("ul#cats").children("li").first().click(function(){
+      $(this).remove();
+    });
+  });
+
+  $("button#walrus-button").click(function(){
+    $("ul#walruses").prepend('<li><img src="img/walrus.jpg"/></li>');
+
+    $("ul#walruses").children("li").first().click(function(){
+      alert("ERR W04: Walrus cannot be removed.");
+    });
+  });
+
 });
